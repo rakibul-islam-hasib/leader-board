@@ -8,7 +8,8 @@
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
@@ -19,6 +20,8 @@ body {
     width: 870px;
     background-color: #fff;
     padding: 30px;
+    margin-top: 26px;
+    border-radius: 5px;
 
 }
 
@@ -90,4 +93,72 @@ hr {
     text-decoration: none;
     color: #562EFF;
     font-size: 16px;
+}
+
+/* --------------------------Courses Style Seet------------------------- */
+.courses
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+.course
+{
+    width: 252px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+}
+.course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-duration
+{
+    width: 94px;
+    height: 30px;
+    background-color:  #FFE4E8;
+    border-radius: 14.6913px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF4A60;
+}
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+/* ----------------------Medea Qures------------------ */
+@media only screen and (max-width:688px) {
+    .container
+    {
+        width: 100%;
+    }
+    .players,.blogs,.courses
+    {
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .player,.blog
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+}
+
+/* -----------Tablet and other devices-------------- */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    
 }
